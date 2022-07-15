@@ -57,6 +57,8 @@ public class s11conditions {
 		
 		System.out.println("a < b OR a < c = " + (a<b || ++a<c)); // Logical OR
 		System.out.println(a);
+		System.out.println("a < b OR a < c = " + (a<b | ++a<c)); // Bitwise OR
+		System.out.println(a);
 		}
 	}
 
