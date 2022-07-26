@@ -1,7 +1,5 @@
 package Phase1PracticeProjects;
 
-import Phase1PracticeProjects.AnonymousInnerClass;
-
 public class PracticeProject7 {
 
 	 private String msg="Welcome to Java"; 
