@@ -1,4 +1,4 @@
-package searchElement;
+package Phase1MainProjects;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -9,7 +9,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Scanner;
-public class searchElement
+public class MainProject3
 {
     public static void main(String args[]) throws FileNotFoundException, IOException {
         System.out.println("Please select one of the below operations");
@@ -24,20 +24,14 @@ public class searchElement
         }
         else if(s.equalsIgnoreCase("w")||s.equalsIgnoreCase("a"))
         {
-            writingToFile(s);
-            
-            
+            writingToFile(s);   
         }
         else
         {
             System.out.println("Sorry an error encountered ");
         }
-        
-        
         in.close();
-        
     }
-    
     public static void writingToFile(String s)
     {
         Scanner in=null;
@@ -47,7 +41,7 @@ public class searchElement
             File f=new File("file1.txt");
             
             BufferedReader bf=new BufferedReader(new InputStreamReader(System.in));
-            //For writing new Content Everytime you run
+            //For writing 
             FileWriter f0 =null;
             if(s.equalsIgnoreCase("w"))
             {
@@ -69,7 +63,7 @@ public class searchElement
                 
                 in.close();
             }
-            //For appending the content
+            //For appending
             else
             {  f0 = new FileWriter(f,true);
                 System.out.println("Write 'stop' when you finish appending file ");
@@ -83,13 +77,8 @@ public class searchElement
         catch(Exception e){
             System.out.println("Error : " );
             e.printStackTrace();
-        }
-        
-        
-    }
-    
-    
-    
+        }       
+    }   
 }
 
 class FReading {
@@ -103,7 +92,7 @@ class FReading {
             f5.createNewFile();
             FileReader fl=new FileReader(f5);
             BufferedReader bf=new BufferedReader(fl);
-            //For reading till end
+          //For reading
             while((str=bf.readLine())!=null){
                 System.out.println(str);
             }
