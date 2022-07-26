@@ -1,12 +1,11 @@
-package searchElement;
-
+package Phase1MainProjects;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.Scanner;
 
-public class searchElement {
+public class MainProject4 {
     
     public static int lengthOfLIS(int[] nums) {
         
