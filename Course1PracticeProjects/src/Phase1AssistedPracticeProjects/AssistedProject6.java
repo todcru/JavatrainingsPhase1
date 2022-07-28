@@ -1,7 +1,7 @@
-package Phase1PracticeProjects;
+package Phase1AssistedPracticeProjects;
 
 import java.util.*;
-public class PracticeProject6 {
+public class AssistedProject6 {
 
 	public static void main(String[] args) {
 		// map

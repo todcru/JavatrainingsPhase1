@@ -1,20 +1,35 @@
 package Phase1PracticeProjects;
 
-class defPracticeProject2
-{ 
-  void display() 
-     { 
-         System.out.println("You are using defalut access specifier"); 
-     } 
-} 
+import java.util.Scanner;
 
 public class PracticeProject2 {
+    static String [] EmployeeEmailID= {"abc@gmail.com","def@gmail.com","egh@gmail.com","ijk@gmail.com","lmn@gmail.com"};
 
 	public static void main(String[] args) {
-		//default
-		System.out.println("Dafault Access Specifier");
-		defPracticeProject2 obj = new defPracticeProject2(); 		  
-        obj.display(); 
-
+        Scanner inp= new Scanner(System.in);
+        String userID;
+		while (true){
+	     System.out.println("---- Please Enter your EMAIL ID--- ");
+	     userID = inp.next();
+	     VerfiyID(userID);
+	     System.out.println("");
+	     }
+	}
+	private static void VerfiyID(String ID)
+	{
+		boolean accessFlag= false;
+	     for(String id : EmployeeEmailID)
+	     {
+	    	 if(ID.equalsIgnoreCase(id))
+	    	 {
+	    		 accessFlag=true;
+		    	 System.out.println("EMAIL VALIDATED "+ ID );
+	    		 break;
+	    	 }   	 
+	     }
+	     if(accessFlag==false)
+	     {
+	    	 System.out.println("INVALID EMAIL ID "+ ID );
+	     }	
 	}
 }

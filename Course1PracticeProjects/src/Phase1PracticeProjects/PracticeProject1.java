@@ -1,37 +1,35 @@
 package Phase1PracticeProjects;
 
-public class PracticeProject1 {
+import java.util.Scanner;
 
+public class PracticeProject1 {
 	public static void main(String[] args) {
-		
-		//implicit conversion
-		System.out.println("Implicit Type Casting");
-		char a='A';
-		System.out.println("Value of a: "+a);
-		
-		int b=a;
-		System.out.println("Value of b: "+b);
-		
-		float c=a;
-		System.out.println("Value of c: "+c);
-		
-		long d=a;
-		System.out.println("Value of d: "+d);
-		
-		double e=a;
-		System.out.println("Value of e: "+e);
-		
-				
-		System.out.println("\n");
-		
-		System.out.println("Explicit Type Casting");
-		//explicit conversion
-		
-		double x=45.5;
-		int y=(int)x;
-		System.out.println("Value of x: "+x);
-		System.out.println("Value of y: "+y);
-		
+		int a, b;
+		char op;
+
+		Scanner scanner;
+		Scanner s = new Scanner(System.in);
+		System.out.println("Enter Two Integers");
+		a = s.nextInt();
+		b = s.nextInt();
+		System.out.println("Enter an Operator from +, -, *, /");
+		op = s.next().charAt(0);
+
+		switch (op) {
+		case '+':
+			System.out.format("%d + %d = %d\n", a, b, a + b);
+			break;
+		case '-':
+			System.out.format("%d - %d = %d\n", a, b, a - b);
+			break;
+		case '*':
+			System.out.format("%d * %d = %d\n", a, b, a * b);
+			break;
+		case '/':
+			System.out.format("%d / %d = %d\n", a, b, a / b);
+			break;
+		default:
+			System.out.println("ERROR: Unsupported Operation");
+		}
 	}
 }
-

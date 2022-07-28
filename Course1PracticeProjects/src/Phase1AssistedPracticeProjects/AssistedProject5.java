@@ -1,9 +1,9 @@
-package Phase1PracticeProjects;
+package Phase1AssistedPracticeProjects;
 
 
 import java.util.*;
 
-public class PracticeProject5 {
+public class AssistedProject5 {
 
 	public static void main(String[] args) {
 		//creating arraylist

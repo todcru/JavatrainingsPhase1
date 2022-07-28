@@ -1,8 +1,8 @@
-package Phase1PracticeProjects;
+package Phase1AssistedPracticeProjects;
 
 import java.util.regex.*;
 
-public class PracticeProject10 {
+public class AssistedProject10 {
 
 public static void main(String[] args) {
 
