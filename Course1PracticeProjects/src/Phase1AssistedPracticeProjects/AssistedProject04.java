@@ -9,7 +9,7 @@ void display() {
 	}
 }
 
-public class AssistedProject4 {
+public class AssistedProject04 {
 
 public static void main(String[] args) {
 
