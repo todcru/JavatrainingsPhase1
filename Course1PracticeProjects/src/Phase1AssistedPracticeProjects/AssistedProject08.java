@@ -1,6 +1,6 @@
 package Phase1AssistedPracticeProjects;
 
-public class AssistedProject8 {
+public class AssistedProject08 {
 
 	public static void main(String[] args) {
 		//methods of strings
