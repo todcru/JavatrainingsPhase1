@@ -1,6 +1,6 @@
 package Phase1AssistedPracticeProjects;
 
-public class AssistedProject3 {
+public class AssistedProject03 {
 
 int val=150;
 
@@ -10,7 +10,7 @@ int operation(int val) {
 }
 
 public static void main(String args[]) {
-	AssistedProject3 d = new AssistedProject3();
+	AssistedProject03 d = new AssistedProject03();
 	System.out.println("Before operation value of data is "+d.val);
 	d.operation(100);
 	System.out.println("After operation value of data is "+d.val);
