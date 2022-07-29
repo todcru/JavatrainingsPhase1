@@ -8,7 +8,7 @@ class defPracticeProject2
      } 
 } 
 
-public class AssistedProject2 {
+public class AssistedProject02 {
 
 	public static void main(String[] args) {
 		//default
