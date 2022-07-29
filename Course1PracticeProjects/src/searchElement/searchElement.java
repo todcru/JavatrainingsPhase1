@@ -1,104 +1,103 @@
 package searchElement;
 
-
-import java.util.ArrayList;
 import java.util.Scanner;
+import java.io.IOException;
 
 public class searchElement {
 
-    public static void main(String[] args) {
-        /*System.ou
-         * t.println("Hello World!");*/
-        System.out.println("\n**************************************\n");
-        System.out.println("\tWelcome to TheDesk \n");
-        System.out.println("**************************************");
-        optionsSelection();
+	public static void main(String[] args) throws IOException {
+		int ch=0, choice=0;
+		Scanner sc =new Scanner(System.in);
+		
+		System.out.println("\t**********************\n");
+		System.out.println("\t Welcome to LOCK IT! ");
+		System.out.println("\t By, Locker Pvt Ltd. \n");
+		System.out.println("\t**********************");
+		System.out.println(" Developer\t: Mohammed Mueen \n Company\t: Trivium e-Solutions \n");
+		
+		while(true)
+		{
+			System.out.println("Please choose one of the following options :");
+			System.out.println("1. List Current Files");
+			System.out.println("2. Business Operations");
+			System.out.println("3. Close Application");
+			try{    
+				ch = sc.nextInt();
+			}
+			catch(Exception e)  
+             {  
+              System.out.println("Null Exception occurred");  
+             }         
+			
+			switch(ch)
+			{
+			case 1: //List function feature to list all files in ascending order.
+				BusinessOperations.listFiles();
+				break;
+			case 2:
+				
+					System.out.println("Please choose one of the following options :");
+					System.out.println("1. Add a File");
+					System.out.println("2. Delete a File");
+					System.out.println("3. Search for a File");
+					try{    
+						 choice = sc.nextInt();
+					}
+					catch(Exception e)  
+	                  {  
+	                   System.out.println("Null Exception occurred");  
+	                  }          
+					switch(choice)
+					{
+					case 1:
+						//Creation of a file takes place
+						System.out.println("Input the name of a file to be created: ");
+						String fileCreate = sc.next();
+						
+						// Calling the function to create the file
+						BusinessOperations.createFile(fileCreate);
+						break;
+						
+					case 2:
+						//deletion of a file takes place
+						System.out.print("Input the name of a file to be deleted: ");
+						String fileDelete = sc.next();
+						
+						// Calling the function to delete the file
+						BusinessOperations.deleteFile(fileDelete);
+						break;
+					case 3:
+						//Search for a file takes place
+						System.out.println("Input the name of a file to be searched: ");
+						String fileSearch = sc.next();
+						
+						// Calling the function to search the file
+						BusinessOperations.searchFile(fileSearch);
+						break;
+						
+				default:
+						//In the case of unprecedented input execute this
+						System.out.println("\n Opps! Invalid Input,Re-do the process\n");
+						break;
+				}
+			
+					break;
+			case 3:
+				
+				//Voluntarily exiting the application
+				sc.close();
+				System.out.println("\n It was nice having you here! See you again. Good bye...");
+				System.exit(1);
+				break;
+			
+			default:
+				//In the case of unprecedented input execute this
+				System.out.println("\n\n Opps! Invalid Input, Select within the range of 1-3\n");
+				break;
+			
+			}
+		}
+		
+	}
 
-    }
-    private static void optionsSelection() {
-        String[] arr = {"1. I wish to review my expenditure",
-                "2. I wish to add my expenditure",
-                "3. I wish to delete my expenditure",
-                "4. I wish to sort the expenditures",
-                "5. I wish to search for a particular expenditure",
-                "6. Close the application"
-        };
-        int[] arr1 = {1,2,3,4,5,6};
-        int  slen = arr1.length;
-        for(int i=0; i<slen;i++){
-            System.out.println(arr[i]);
-            // display the all the Strings mentioned in the String array
-        }
-        ArrayList<Integer> arrlist = new ArrayList<Integer>();
-        ArrayList<Integer> expenses = new ArrayList<Integer>();
-        expenses.add(1000);
-        expenses.add(2300);
-        expenses.add(45000);
-        expenses.add(32000);
-        expenses.add(110);
-        expenses.addAll(arrlist);
-        System.out.println("\nEnter your choice:\t");
-        Scanner sc = new Scanner(System.in);
-        int  options =  sc.nextInt();
-        for(int j=1;j<=slen;j++){
-            if(options==j){
-                switch (options){
-                    case 1:
-                        System.out.println("Your saved expenses are listed below: \n");
-                        System.out.println(expenses+"\n");
-                        optionsSelection();
-                        break;
-                    case 2:
-                        System.out.println("Enter the value to add your Expense: \n");
-                        int value = sc.nextInt();
-                        expenses.add(value);
-                        System.out.println("Your value is updated\n");
-                        expenses.addAll(arrlist);
-                        System.out.println(expenses+"\n");
-                        optionsSelection();
-
-                        break;
-                    case 3:
-                        System.out.println("You are about the delete all your expenses! \nConfirm again by selecting the same option...\n");
-                        int con_choice = sc.nextInt();
-                        if(con_choice==options){
-                               expenses.clear();
-                            System.out.println(expenses+"\n");
-                            System.out.println("All your expenses are erased!\n");
-                        } else {
-                            System.out.println("Oops... try again!");
-                        }
-                        optionsSelection();
-                        break;
-                    case 4:
-                        sortExpenses(expenses);
-                        optionsSelection();
-                        break;
-                    case 5:
-                        searchExpenses(expenses);
-                        optionsSelection();
-                        break;
-                    case 6:
-                        closeApp();
-                        break;
-                    default:
-                        System.out.println("You have made an invalid choice!");
-                        break;
-                }
-            }
-        }
-
-    }
-    private static void closeApp() {
-        System.out.println("Closing your application... \nThank you!");
-            }
-    private static void searchExpenses(ArrayList<Integer> arrayList) {
-        int leng = arrayList.size();
-        System.out.println("Enter the expense you need to search:\t");
-        //Complete the method
-    }
-    private static void sortExpenses(ArrayList<Integer> arrayList) {
-        int arrlength =  arrayList.size();
-       //Complete the method. The expenses should be sorted in ascending order.
-    }
 }

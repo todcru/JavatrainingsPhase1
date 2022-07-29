@@ -3,7 +3,7 @@ package Phase1PracticeProjects;
 import java.util.Scanner;
 
 public class PracticeProject2 {
-    static String [] EmployeeEmailID= {"abc@gmail.com","def@gmail.com","egh@gmail.com","ijk@gmail.com","lmn@gmail.com"};
+    static String [] EmailID= {"abc@gmail.com","def@gmail.com","egh@gmail.com","ijk@gmail.com","lmn@gmail.com"};
 
 	public static void main(String[] args) {
         Scanner inp= new Scanner(System.in);
@@ -18,7 +18,7 @@ public class PracticeProject2 {
 	private static void VerfiyID(String ID)
 	{
 		boolean accessFlag= false;
-	     for(String id : EmployeeEmailID)
+	     for(String id : EmailID)
 	     {
 	    	 if(ID.equalsIgnoreCase(id))
 	    	 {
