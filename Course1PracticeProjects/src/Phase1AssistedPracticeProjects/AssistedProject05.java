@@ -3,7 +3,7 @@ package Phase1AssistedPracticeProjects;
 
 import java.util.*;
 
-public class AssistedProject5 {
+public class AssistedProject05 {
 
 	public static void main(String[] args) {
 		//creating arraylist
