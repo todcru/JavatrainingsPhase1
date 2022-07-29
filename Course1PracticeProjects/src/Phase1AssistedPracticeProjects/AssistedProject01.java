@@ -1,6 +1,6 @@
 package Phase1AssistedPracticeProjects;
 
-public class AssistedProject1 {
+public class AssistedProject01 {
 
 	public static void main(String[] args) {
 		
