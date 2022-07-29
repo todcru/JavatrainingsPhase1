@@ -6,7 +6,7 @@ public class AssistedProject15
     public static void main(String[] args)
     {
 
-        int a=45,b=0,rs;
+        int a=44,b=0,rs;
 
         try
         {
