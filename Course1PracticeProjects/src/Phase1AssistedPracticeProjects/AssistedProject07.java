@@ -1,6 +1,6 @@
 package Phase1AssistedPracticeProjects;
 
-public class AssistedProject7 {
+public class AssistedProject07 {
 
 	 private String msg="Welcome to Java"; 
 	 
@@ -11,8 +11,8 @@ public class AssistedProject7 {
 
 	public static void main(String[] args) {
 
-		AssistedProject7 obj=new AssistedProject7();
-		AssistedProject7.Inner in=obj.new Inner();  
+		AssistedProject07 obj=new AssistedProject07();
+		AssistedProject07.Inner in=obj.new Inner();  
 		in.hello();  
 	}
 }
