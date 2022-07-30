@@ -1,24 +1,25 @@
-package searchElement;
+package Phase1Assessment;
 
 import java.io.File;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class demo {
+public class VirtualKeyRepository {
     public static void main(String[] args)  {
-        File folder = new File("/Users/soumyarawat/Desktop/Project/main");
-        folder.mkdirs(); // Created a Directory named Project and inside it created a main folder
+        File folder = new File("E:\\JAVAFSD\\Javatrainings\\Javatrainings\\Course1PracticeProjects\\src\\Phase1Assessment\\ProjectDirectory");
+        folder.mkdirs();
         Scanner scan = new Scanner(System.in);
 
         while(true){
 
-            System.out.println("**********Prototype of the Application LockedMe.com**********  \n");
-            System.out.println("*****The following functions are :- *******   \n");
-            System.out.println("1. To display the files in ascending order\n");
-            System.out.println("2. Here are some User Enabled Operations  \n");
-            System.out.println("3. Terminate Program");
-            System.out.println("*****What option do you want to go with*****  \n");
-
+            System.out.println(" Welcome to LockedMe.com \n" + " This application was developed by Aswin Kumar M \n");
+            System.out.println(" © All rights reserved \n");
+            System.out.println("******************************************************************************* \n");
+            System.out.println(" \n Select any of the following functions to execute :- *******   \n ");
+            System.out.println("  1. To display the files in ascending order");
+            System.out.println("  2. To execute User Enabled Operations");
+            System.out.println("  3. Terminate Program");
+            
             int choice = scan.nextInt();
             switch(choice)
             {
@@ -35,18 +36,18 @@ public class demo {
                 case 2:
                     Boolean temp = true;
                     while(temp) {
-                        System.out.println("Option 1 :- To Add a file in the existing Directory");
-                        System.out.println("Option 2 :- To Delete a file from the existing Directory. ");
-                        System.out.println("Option 3 :- To Search a user specified file from the Directory");
-                        System.out.println("Option 4 :- Back to the previous menu");
-                        System.out.println("Option 5 :- Terminate Program");
+                        System.out.println(" 1. To Add a file ");
+                        System.out.println(" 2. To Delete a file ");
+                        System.out.println(" 3. To Search a specified file ");
+                        System.out.println(" 4. Previous Menu");
+                        System.out.println(" 5. Terminate Program");
 
 
                         int choice2 = scan.nextInt();
 
                         switch (choice2) {
                             case 1:
-                                /*File f = new File("/Users/soumyarawat/Desktop/Project/main");*/
+                                
                                 System.out.println("Enter a file name");
                                 String name = scan.next();
                                 if(new File(folder,name).exists()){
@@ -74,7 +75,7 @@ public class demo {
                                 } else {
                                     System.out.println("file does not exist");
                                 }
-                                /*folder2.delete();*/
+                                
                                 break;
 
 
@@ -99,7 +100,7 @@ public class demo {
 
                             case 5:
 
-                                System.out.println("*********Program Terminated Successfully***********");
+                                System.out.println(" Program Terminated Successfully \n\n ==============================================================");
                                 System.exit(0);
                             default:
                                 System.out.println("Input correct value and retry");
@@ -110,7 +111,7 @@ public class demo {
                     break;
 
                 case 3:
-                    System.out.println("*********Program Terminated Successfully***********");
+                    System.out.println(" Program Terminated Successfully \n ==============================================================");
                     System.exit(0);
 
                 default:
